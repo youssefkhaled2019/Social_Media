@@ -1,3 +1,6 @@
  day_1    create vm
           create project  "socialmedia"
 -----------------------------------------
+ day_2    create app "blog"
+          create home and about  pages
+-----------------------------------------
