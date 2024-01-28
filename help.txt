@@ -102,4 +102,21 @@ post_3.author
 post_3.author.email
 user.post_set.all() #get all  user's post
 user.post_set.all().count()
--------------------------------
+
+--------------crispy-------------------
+>>> pip install crispy-bootstrap4
+--seting.py-----
+INSTALLED_APPS = (
+...
+"crispy_forms",
+"crispy_bootstrap4",
+...
+)
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+
+-----.html------
+{% load crispy_forms_tags %}
+{{form|crispy}}
+-----------------------------------------------
