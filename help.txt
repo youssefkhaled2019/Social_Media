@@ -103,6 +103,14 @@ post_3.author.email
 user.post_set.all() #get all  user's post
 user.post_set.all().count()
 
+          ------------------------ 
+from django.contrib.auth.models import User
+user=User.objects.filter(username='youssef').first()
+user.profile
+user.profile.image
+user.profile.image.width
+user.profile.image.url 
+
 --------------crispy-------------------
 >>> pip install crispy-bootstrap4
 --seting.py-----
@@ -119,4 +127,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 -----.html------
 {% load crispy_forms_tags %}
 {{form|crispy}}
+-----------------------------------------------
+pip install Pillow
 -----------------------------------------------
