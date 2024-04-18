@@ -20,7 +20,7 @@ day_4     create superuser
 -----------------------------------------
 day_5        install crispy forms
              create register pages   and  connect user model
----------------------------------------
+-----------------------------------------------
 day_6        -create login and logout system
              -create   login ,logout ,profile  templates
              -use Authentication system  protection home and profile pages  by login_required
@@ -34,3 +34,8 @@ day_8        create UserUpdateForm ,ProfileUpdateForm  form for update data and 
              change in profile template add forms and
              -resize image profile upload in profile model  by override save function
              change in home template add image pofile in article section
+-----------------------------------------------
+day_9    create PostListView ,PostDetailView,PostCreateView,PostUpdateView,PostDeleteView  by views class 
+         change Authentication system by LoginRequiredMixin for log in 
+                                         UserPassesTestMixin   for not change any content he is not owner
+-----------------------------------------------
