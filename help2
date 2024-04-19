@@ -16,3 +16,37 @@
     <input class="nav-link" type="submit" value="Log out" style="background: none; border: none;">
 </form> 
 
+
+
+
+--------------------------------------
+
+# Run Django shell (python manage.py shell) and then run the following commands...
+
+>>> import json
+>>> from blog.models import Post
+>>> with open('posts.json') as f:  #C:\Users\you\Downloads\GitHub\Social_Media\posts.json
+...   post_json = json.load(f)
+...
+
+
+
+>>> for post in post_json:
+...   post = Post(title=post['title'], content=post['content'], author_id=post['user_id'])
+...   post.save()
+...
+>>> exit()
+
+--------------------------------------
+from django.core.paginator import Paginator
+posts=['1','2','3','4','5','6','7','8','9']
+p=Paginator(posts,2)
+p.num_pages
+for i in p.page_range:
+    print(i)
+p1=p.page(1)     #<Page 1 of 5>
+p1.number         #1
+p1.object_list   #['1', '2']
+p1.has_previous() #False
+p1.has_next()   #True
+p1.next_page_number() #2
